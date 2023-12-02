@@ -50,7 +50,7 @@ class Predictor(BasePredictor):
                                   default=2),
         language: str = Input(description="Language of the spoken words as a language code like 'en'. Leave empty to auto detect language.",default=None),
         prompt: str = Input(description="Prompt, provide names, acronyms and loanwords in a list. Use punctuation for best accuracy.",
-                            default="AI, Thomas, Audiogest."),
+                            default="Latent Space podcast with Alessio and Swyx."),
         # word_timestamps: bool = Input(description="Return word timestamps", default=True), needs to be implemented
         offset_seconds: int = Input(
             description="Offset in seconds, used for chunked inputs",
@@ -123,7 +123,7 @@ class Predictor(BasePredictor):
     def speech_to_text(self,
                        audio_file_wav,
                        num_speakers=2,
-                       prompt="People takling.",
+                       prompt="People talking.",
                        offset_seconds=0,
                        group_segments=True,
                        language=None,
